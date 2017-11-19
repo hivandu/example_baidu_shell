@@ -1,0 +1,308 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+body.login_bg {
+    background: url(../images/bg_login.jpg) no-repeat center top;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+
+/*登录页*/
+
+.whitelogin {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 0 20px 20px 20px;
+    width: 290px;
+    margin: 120px auto 0 auto;
+}
+
+.whitelogin .form-group {
+    margin-bottom: 20px;
+}
+
+.whitelogin h3 {
+    color: #48445b;
+    font-weight: bold;
+}
+
+.btn-purple {
+    color: #fff;
+    background-color: #565a73;
+    border-color: #565a73;
+}
+
+.btn-purple:hover {
+    color: #fff;
+    background-color: #6c729a;
+    border-color: #6c729a;
+}
+
+.whiteBg .code {
+    margin-left: 10px;
+    font-size: 12px;
+    color: #1b8fc2;
+}
+
+.whiteBg p {
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.pd0 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+/*首页*/
+
+.main {
+    /*position: relative;*/
+    height: 100%;
+}
+
+
+/*左侧*/
+
+.left {
+    background: #1874CD;
+    color: #FFF;
+    padding: 0;
+    /*position: relative;*/
+    height: 100%;
+}
+
+.left .navbar-default {
+    background: none;
+}
+
+.left .navbar-default .navbar-brand {
+    color: #FFF;
+    /*padding: 15px 30px;*/
+}
+
+.left .navbar-default .navbar-nav>li>a {
+    color: #FFF;
+    background-color: #473C8B;
+    border-left: solid 2px #473C8B;
+}
+
+.left .navbar-default .navbar-nav>li>a:focus,
+.left .navbar-default .navbar-nav>li>a:hover {
+    background-color: #1874ED;
+    border-left: solid 2px #48D1CC;
+}
+
+.left .navbar-default .navbar-nav>.active>a {
+    background-color: #4876FF;
+    border-left: solid 2px #4EEE94;
+}
+
+.left .navbar-default .navbar-nav>.active>a:focus,
+.left .navbar-default .navbar-nav>.active>a:hover {
+    background-color: #4169E1;
+    border-left: solid 2px #4EEE94;
+}
+
+.left .navbar-default,
+.left .navbar-collapse {
+    border: none;
+}
+
+.left .navbar-header {
+    padding-right: 20px;
+}
+
+.left .navbar-default .navbar-collapse,
+.left .navbar-default .navbar-form {
+    border: none;
+}
+
+.left .navbar-default .navbar-toggle:focus,
+.left .navbar-default .navbar-toggle:hover {
+    background-color: #436EEE;
+}
+
+@media (max-width: 768px) {
+    .left {
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .left .navbar-nav>li {
+        width: 100%;
+    }
+    .left .navbar-collapse {
+        padding-right: 0;
+    }
+}
+
+
+/*右侧*/
+
+.right {
+    /*margin: 50px;*/
+    /*float: left;*/
+}
+
+.right h3 {
+    border-bottom: solid 1px #cdcdcd;
+    padding-bottom: 10px;
+}
+
+li > .btn-modfity {
+    float: right;
+    margin-right: 10px;
+}
+
+li > .btn-delete {
+    float: right;
+    margin-right: 10px;
+}
+
+
+/*修改内容部分的样式*/
+
+#modify {
+    display: none;
+    border: 1px solid #f1f1f1;
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    left: 50%;
+    margin-left: -210px;
+    top: 10%;
+    background-color: #87CEFA;
+    width: 400px;
+    text-align: center;
+}
+
+#mdfInfo{
+    color: #f00;
+    font-weight: bold;
+}
+
+.full-width {
+    margin-top: 10px;
+    width: 100%;
+}
+
+#modify input,
+#insertNewsDialog input {
+    border-radius: 5px;
+}
+
+.news-content {
+    height: 200px;
+}
+
+.float-right {
+    margin-right: 10px;
+    float: right;
+}
+
+
+/*删除内容部分的样式*/
+#delete {
+    display: none;
+    border: 1px solid #f1f1f1;
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    background-color: #87CEFA;
+    width: 250px;
+}
+
+#delete input {
+    float: right;
+}
+
+/*添加部分的样式*/
+
+#insertNewsDialog {
+    display: none;
+    border: 1px solid #f1f1f1;
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    left: 50%;
+    margin-left: -210px;
+    top: 10%;
+    background-color: #87CEFA;
+    width: 400px;
+}
+
+#addBtn-face {
+    margin-top: -35px;
+}
+
+.index-content-items {
+    width: 100%;
+    overflow: hidden;
+}
+
+.index-content-item {
+    position: relative;
+    height: 7rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.index-content-item img {
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    width: 95px;
+    height: 68px;
+}
+
+.index-content-item h4 {
+    position: absolute;
+    top: .1rem;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+    left: 110px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.index-content-item > div {
+    position: absolute;
+    top: 35px;
+    left: 110px;
+    font-size: 12px;
+    color: #5c5c5c;
+}
+
+.index-content-item > div span {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 220px;
+}
+
+.index-content-item time {
+    position: absolute;
+    bottom: 12px;
+    left: 110px;
+    font-size: 12px;
+    color: #5c5c5c;
+}
+

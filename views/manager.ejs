@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>新闻管理系统</title>
+    <!-- Bootstrap -->
+    <link href="./stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="./stylesheets/managerstyle.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container main">
+        <div class="row main">
+            <!--左边-->
+            <div class="col-md-3 col-sm-3 left">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                            <span class="sr-only">切换导航</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span> </button>
+                        <a class="navbar-brand" href="#">新闻管理系统</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                        <ul id="navbar" class="nav navbar-nav">
+                            <li class="active"><a href="#">推荐</a></li>
+                            <li><a href="#">百家</a></li>
+                            <li><a href="#">本地</a></li>
+                            <li><a href="#">图片</a></li>
+                            <li><a href="#">娱乐</a></li>
+                            <li><a href="#">社会</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!--左边结束-->
+            <!-- 右边 -->
+            <div class="col-md-9 col-sm-9 right">
+                <h3>管理系统                
+                <button id="insertNews" type='button' class='btn btn-info float-right'>新增</button>
+                </h3>
+                <div class="index-content-items">
+                    <ul id="newsul" class="index-content-items-inner">
+                    </ul>
+                </div>
+            </div>
+            <!-- 右边结束-->
+        </div>
+        <!-- 三个弹框 -->
+        <div id="modify">
+            <p id="mdfInfo">请修改信息</p>
+            <input type='text' readonly name='mNewsId' id="mNewsId">
+            <select disabled name='tableName' id="mNewsType">
+                <option value="请选择...">请选择</option>
+                <option value="0">推荐</option>
+                <option value="1">百家</option>
+                <option value="2">本地</option>
+                <option value="3">图片</option>
+                <option value="4">娱乐</option>
+                <option value="5">社会</option>
+            </select>
+            <h5>新闻标题：</h5>
+            <input type='text'  id="mNewsTitle" class='full-width' name='mNewsTitle'>
+            <h5>图片路径：</h5>
+            <input type='text'  id="mNewsImage" class='full-width' name='mNewsImage'>
+            <h5>新闻内容：</h5>
+            <textarea   id="mNewsContent" class='full-width news-content'></textarea>
+            <input  id="mNewsDate" type='date' name='mNewsDate'>
+            <input type="hidden" id="updatecsrf" name="_csrf" value="<%= csrfToken %>">
+
+            <input type='submit' id="mdfUpDate" class='float-right btn btn-danger' value='保存'>
+            <input type='button' id="mdfHide" class='float-right btn btn-info' value='取消'>
+        </div>
+        <div id="delete">
+            <label id="info"></label>
+            <input type='button' id="deleteBtn" class='btn btn-danger' value='确定'>
+            <input type='button' id="cancelBtn" class='btn btn-info' value='取消'>
+        </div>
+        <div id="insertNewsDialog">
+            <h2 id='insertPrompt'>请输入信息</h2>
+            <h5>新闻类别：</h5>
+            <select name='newsType' id="newsType" class="full-width">
+                <option value="-1">请选择</option>
+                <option value="0">推荐</option>
+                <option value="1">百家</option>
+                <option value="2">本地</option>
+                <option value="3">图片</option>
+                <option value="4">娱乐</option>
+                <option value="5">社会</option>
+            </select>
+            <h5>新闻标题：</h5>
+            <input type='text' class='full-width' id="newsTitle">
+            <h5>图片路径：</h5>
+            <input type='text' class='full-width' id="newImg">
+            <h5>新闻内容：</h5>
+            <textarea class='full-width news-content' id='newsContent'></textarea>
+            <input type='date'  id="newsDate">
+            <input type="hidden" id="insertcsrf" name="_csrf" value="<%= csrfToken %>">
+            <input type='button' id="insertSave" class='float-right btn btn-info'value='保存'>
+            <input type='button' id="insertCancel" class='float-right btn btn-danger' value='取消'>
+        </div>
+    </div>
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="javascripts/manager.js"></script>
+</body>
+
+</html>
